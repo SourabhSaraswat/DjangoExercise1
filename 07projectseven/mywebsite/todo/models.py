@@ -4,7 +4,7 @@ from django.db import models
 
 class Todo(models.Model):
     complete = models.BooleanField(default=False)
-    todotext = models.CharField(max_length=50)
+    todotext = models.CharField(max_length=50,null=False, blank=False)
 
     def __str__(self):
         return self.todotext
